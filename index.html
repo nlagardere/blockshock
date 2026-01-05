@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Block Blast</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="title">Block Blast</h1>
+      <button class="restart-btn" id="restartBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Score -->
+    <div class="score-container">
+      <div class="score-label">Score</div>
+      <div class="score-value" id="scoreDisplay">0</div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid-container">
+      <div class="game-grid" id="gameGrid"></div>
+    </div>
+
+    <!-- Pieces -->
+    <div class="pieces-container">
+      <p class="pieces-hint">Drag pieces to the grid</p>
+      <div class="pieces-row" id="piecesRow"></div>
+    </div>
+  </div>
+
+  <!-- Drag Preview -->
+  <div class="drag-preview" id="dragPreview" style="display: none;"></div>
+
+  <!-- Game Over -->
+  <div class="game-over-overlay hidden" id="gameOverOverlay">
+    <div class="game-over-content">
+      <h2 class="game-over-title">Game Over!</h2>
+      <p class="game-over-label">Final Score</p>
+      <div class="game-over-score" id="finalScore">0</div>
+      <button class="play-again-btn" id="playAgainBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+        Play Again
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
